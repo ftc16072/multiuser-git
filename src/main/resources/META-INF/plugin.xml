@@ -1,0 +1,34 @@
+<idea-plugin>
+  <id>org.quantumquacks.plugins.multiuser-git</id>
+  <name>MultiUser Git</name>
+  <vendor email="ftc16072@gmail.com" url="http://www.quantumquacks.org">Quantum Quacks</vendor>
+
+  <description><![CDATA[
+      This allows multiple users of Git to easily switch on same computer.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Initial version
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <project-components>
+    <component>
+      <implementation-class>org.quantumquacks.plugins.MultiUserGit</implementation-class>
+    </component>
+  </project-components>
+
+  <actions>
+      <action id="SelectUser"
+          class="org.quantumquacks.plugins.SelectUserAction"
+          text="_Select Git User"
+          description="SelectUser">
+        <add-to-group group-id="ToolsMenu" anchor="last"/>
+      </action>
+  </actions>
+
+</idea-plugin>
