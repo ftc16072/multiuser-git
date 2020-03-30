@@ -5,10 +5,21 @@
 
   <description><![CDATA[
       This allows multiple users of Git to easily switch on same computer.
+      <br/>
+      It looks for a gitUsers.xml file in the root of the project with a format like:
+&lt;XML&gt;
+<br/>
+   &lt;USER name=&quot;user&quot; email=&quot;user@domain.com&quot;/&gt;
+<br/>
+&lt;/XML&gt;
+
     ]]></description>
 
   <change-notes><![CDATA[
-      Initial version
+      <UL>
+      <LI>1.0.1 Fixed build.gradle to not put defaults in change notes</LI>
+      <LI>1.0 Initial version</LI>
+      </UL>
     ]]>
   </change-notes>
 

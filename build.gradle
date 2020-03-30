@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.quantumquacks.plugins'
-version '1.0'
+version '1.0.1'
 sourceCompatibility = 1.8
 
 repositories {
@@ -26,10 +26,4 @@ runIde {
     ideDirectory '/Applications/Android Studio.app/Contents'
 }
 
-
-patchPluginXml {
-    changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
-}
 
