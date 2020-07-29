@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.4.16'
+    id 'org.jetbrains.intellij' version '0.4.20'
 }
 
 group 'org.quantumquacks.plugins'
-version '1.0.1'
+version '1.0.2'
 sourceCompatibility = 1.8
 
 repositories {
@@ -17,8 +17,9 @@ intellij {
     // Define IntelliJ Platform against which to build the plugin project.
     version '192.7142.36'  // Same IntelliJ IDEA version (2019.1.4) as target 3.5 Android Studio
     type 'IC'              // Use IntelliJ IDEA CE because it's the basis of the IntelliJ Platform
-    sameSinceUntilBuild true
 }
+
+patchPluginXml.untilBuild(null)
 
 runIde {
     // Absolute path to installed target 3.5 Android Studio to use as IDE Development Instance

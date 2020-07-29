@@ -17,6 +17,7 @@
 
   <change-notes><![CDATA[
       <UL>
+      <LI>1.0.2 Made so it would work with 4.x
       <LI>1.0.1 Fixed build.gradle to not put defaults in change notes</LI>
       <LI>1.0 Initial version</LI>
       </UL>
