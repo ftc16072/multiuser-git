@@ -5,7 +5,6 @@ import com.intellij.openapi.util.Pair;
 import com.sun.istack.Nullable;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,19 +12,18 @@ import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class SelectUserDialogWrapper extends DialogWrapper {
     List<Pair<String, String>> users;
-    JComboBox comboBox;
+    JComboBox<String> comboBox;
 
     public SelectUserDialogWrapper(){
         super(true); // use current window as parent
         users = new ArrayList<>();
-        comboBox = new JComboBox<String>();
+        comboBox = new JComboBox<>();
     }
     public void addUser(String name, String email){
-        users.add(new Pair<String, String>(name, email));
+        users.add(new Pair<>(name, email));
     }
     @Override
     public void init(){
